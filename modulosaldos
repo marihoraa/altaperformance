@@ -2,20 +2,20 @@ package main
 
 import "fmt"
 
-func Depositar(saldo float64, valor float64) float64 {
-	saldo += valor
-	fmt.Println("Depósito de", valor, "realizado.")
+func Depositar(saldo float64, saque float64) float64 {
+	saldo += saque
+	fmt.Println("Depósito de", saque, "realizado.")
 	return saldo
 }
 
-func Sacar(saldo float64, valor float64) float64 {
-	if valor > saldo {
-		fmt.Println("Saldo insuficiente para saque", valor)
+func Sacar(saldo float64, saque float64) float64 {
+	if saque > saldo {
+		fmt.Println("Saldo insuficiente para saque", saque)
 		return saldo
 	}
 
-	saldo -= valor
-	fmt.Println("Saque de", valor, "realizado.")
+	saldo -= saque
+	fmt.Println("Saque de", saque, "realizado.")
 	return saldo
 }
 
